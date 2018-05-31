@@ -16,16 +16,36 @@
 
 <h1>Welcome to Save-On-Gas</h1>
 
-<h2>Inputs:</h2>
-<div>distKm (trip in km)</div>
-<div>litreAvg (in L/100km)</div>
+<input type="text" id="add1" placeholder="add1">
+<br>
+<input type="text" id="add2" placeholder="add2">
+<br>
+
+<h2>Variables:</h2>
+<div>distKm (round trip distance in km)</div>
+<div>litrePer100Km = (litres / 100km)</div>
+<div>milesPerGallon = (miles per US gallon)</div>
 <div>minsTravel (time used in travel)</div>
 <div>cadPrice (price in Canada)</div>
 <div>usdPrice (price in USA)</div>
-<div>noNexusDelay (any delay in traffic?)</div>
 <div>litresFuel (fuel in litres)</div>
 <div>gallonsFuel (fuel in us gallons)</div>
 <div>currencyCAD = (currency * CAD = 1 USD)</div>
+<br>
+
+<h2>User input => Variable</h2>
+<div>What was the roundtrip distance? (kilometers) => distKm</div>
+<div>How long did it take you to travel? (minutes) => minsTravel</div>
+<div>What is the average fuel price in your city? (for 139.9, enter "1.399") => cadPrice</div>
+<div>What is the fuel price at the border? (for 3.339, enter "3.339") => usdPrice</div>
+<div>How many gallons of fuel did you get? => gallonsFuel</div>
+<div>Enter today's currency (if $0.80 Canadian Dollar  = $1.00 US Dollar, enter "0.80") => currencyCAD </div>
+<br>
+
+<h2>Print displays</h2>
+<div>"You spent a total of " + fuelSpent + " litres."</div>
+<div>"You saved a total of $ " + savings + "."</div>
+<div>"At this rate, you are making $ " + hourlyWage + " // hour."</div>
 <br>
 
 <h2>Functions/Algorithms</h2>
@@ -36,19 +56,6 @@
 <div>savings = (comparePrice * litresFuel) - fuelSpent</div>
 <div>hourlyWage = savings * ((minsTravel + noNexusDelay) / 60)</div>
 <br>
-
-<h2>Variables</h2>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-
 
 <script type="text/javascript" src="SaveOnGas.js"></script>
 
