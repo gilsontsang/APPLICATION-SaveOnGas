@@ -99,7 +99,16 @@ $("#enter").on("click", function() {
   }
 })
 
+
+
+
+
+
+
+
+
 /* 
+
 In HTML before:
 <h2>Result:</h2>
 <div id="distKmDisplay"></div>
