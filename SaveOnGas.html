@@ -16,42 +16,119 @@
 
 <h1>Welcome to Save-On-Gas</h1>
 
-<input type="number" id="add1" placeholder="add1">
+
+<!-- INPUTS -->
+<div>What was the roundtrip distance? => distKm</div>
+<input type="number" id="distKm" placeholder="In kilometers">
 <br>
-<input type="number" id="add2" placeholder="add2">
+<div>What is your average litres/100km? => litrePer100Km</div>
+<input type="number" id="litrePer100Km" placeholder="Average l/100km">
 <br>
+<!--
+<div>What is your average miles per gallon?</div>
+<input type="number" id="milesPerGallon" placeholder="">
+<br> 
+-->
+<div>How long did it take you to travel to the border and back? => minsTravel</div>
+<input type="number" id="minsTravel" placeholder="In minutes">
+<br>
+<div>What is the average fuel price in your city?</div>
+<input type="number" id="cadPrice" placeholder="e.g. 139.9, enter 1.399">
+<br>
+<div>What is the fuel price at the border? (for 3.339, enter 3.339) => usdPrice</div>
+<input type="number" id="usdPrice" placeholder="e.g. 3.339, enter 3.339">
+<br>
+<div>How many litres of fuel did you get? => litresFuel</div>
+<input type="number" id="litresFuel" placeholder="Litres of fuel">
+<br>
+<!--
+<div>How many gallons of fuel did you get? => gallonsFuel</div>
+<input type="number" id="gallonsFuel" placeholder="Gallons of fuel">
+<br>
+-->
+<div>Enter today's currency (if $0.80 Canadian Dollar  = $1.00 US Dollar, enter "0.80") => currencyCAD</div>
+<input type="number" id="currencyCAD" placeholder="e.g. $0.80 CAD = $1 USD, enter 0.80">
+<br>
+
+<!-- EVALUATION BUTTON -->
 <button id="enter">Enter</button>
 <br>
 
-<div id="sum">_____</div>
 
+
+
+<!-- DISPLAY RESULTS -->
+<h2>Result:</h2>
+<div id="distKmDisplay"></div>
+<div id="litrePer100KmDisplay"></div>
+<!--
+<div id="milesPerGallonDisplay"></div>
+-->
+<div id="minsTravelDisplay"></div>
+<div id="cadPriceDisplay"></div>
+<div id="usdPriceDisplay"></div>
+<div id="litresFuelDisplay"></div>
+<!--
+<div id="gallonsFuelDisplay"></div>
+-->
+<div id="currencyCADDisplay"></div>
+<br>
+
+
+
+
+<!-- VARIABLE DATABASE -->
 <h2>Variables:</h2>
 <div>distKm (round trip distance in km)</div>
 <div>litrePer100Km = (litres / 100km)</div>
+<!--
 <div>milesPerGallon = (miles per US gallon)</div>
+-->
 <div>minsTravel (time used in travel)</div>
 <div>cadPrice (price in Canada)</div>
 <div>usdPrice (price in USA)</div>
 <div>litresFuel (fuel in litres)</div>
+<!--
 <div>gallonsFuel (fuel in us gallons)</div>
+-->
 <div>currencyCAD = (currency * CAD = 1 USD)</div>
 <br>
 
+
+
+
+<!-- USER INPUT DATABASE -->
 <h2>User input => Variable</h2>
-<div>What was the roundtrip distance? (kilometers) => distKm</div>
-<div>How long did it take you to travel? (minutes) => minsTravel</div>
+<div>What was the roundtrip distance? => distKm</div>
+<div>What is your average litres/100km? => litrePer100Km</div>
+<!--
+<div>What is your average miles per gallon? => milesPerGallon </div>
+-->
+<div>How long did it take you to travel to the border and back? (minutes) => minsTravel</div>
 <div>What is the average fuel price in your city? (for 139.9, enter "1.399") => cadPrice</div>
 <div>What is the fuel price at the border? (for 3.339, enter "3.339") => usdPrice</div>
+<div>How many litres of fuel did you get? => litresFuel</div>
+<!--
 <div>How many gallons of fuel did you get? => gallonsFuel</div>
-<div>Enter today's currency (if $0.80 Canadian Dollar  = $1.00 US Dollar, enter "0.80") => currencyCAD </div>
+-->
+<div>Enter today's currency (if $0.80 Canadian Dollar  = $1.00 US Dollar, enter "0.80") => currencyCAD</div>
 <br>
 
+
+
+
+<!-- PRINT DISPLAY DATABASE -->
 <h2>Print displays</h2>
 <div>"You spent a total of " + fuelSpent + " litres."</div>
 <div>"You saved a total of $ " + savings + "."</div>
 <div>"At this rate, you are making $ " + hourlyWage + " // hour."</div>
 <br>
 
+
+
+
+
+<!-- FUNCTIONS / ALGORITHMS -->
 <h2>Functions/Algorithms</h2>
 <div>usCadPrice = ((1 / currencyCAD) * (1 / 3.78541)) * (usdPrice)</div>
 <div>comparePrice = cadPrice - usCadPrice</div>
