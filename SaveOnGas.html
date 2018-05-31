@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>SaveOnGas</title>
+  <link rel="icon" href="http://images.all-free-download.com/images/graphiclarge/vector_green_background_gas_station_icon_280787.jpg">
+  <link rel="stylesheet" type="text/css" href="SaveOnGas.css">
+<!-- Google fonts below -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+<!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+</head>
+
+<body>
+
+<h1>Welcome to Save-On-Gas</h1>
+
+<h2>Inputs:</h2>
+<div>distKm (trip in km)</div>
+<div>litreAvg (in L/100km)</div>
+<div>minsTravel (time used in travel)</div>
+<div>cadPrice (price in Canada)</div>
+<div>usdPrice (price in USA)</div>
+<div>noNexusDelay (any delay in traffic?)</div>
+<div>litresFuel (fuel in litres)</div>
+<div>gallonsFuel (fuel in us gallons)</div>
+<div>currencyCAD = (currency * CAD = 1 USD)</div>
+<br>
+
+<h2>Functions/Algorithms</h2>
+<div>usCadPrice = ((1 / currencyCAD) * (1 / 3.78541)) * (usdPrice)</div>
+<div>comparePrice = cadPrice - usCadPrice</div>
+<div>litresFuel = gallonsFuel * 3.78541</div>
+<div>fuelSpent = (litreAvg * distKm) / 100 </div>
+<div>savings = (comparePrice * litresFuel) - fuelSpent</div>
+<div>hourlyWage = savings * ((minsTravel + noNexusDelay) / 60)</div>
+<br>
+
+<h2>Variables</h2>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+
+<script type="text/javascript" src="SaveOnGas.js"></script>
+
+</body>
+</html>
