@@ -43,7 +43,8 @@ $("#litresFuel").keypress(function(event) {
 $("#currencyCAD").keypress(function(event) {
 	if(event.which === 13) {
   	currencyCAD = parseFloat($(this).val());
-    $(this).val("");
+    $(this).removeAttr("placeholder");
+    $(this).val("hello");
   }
 })
 
