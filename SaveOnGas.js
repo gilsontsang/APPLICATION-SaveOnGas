@@ -106,6 +106,62 @@ In HTML before:
 -->
 <div id="currencyCADDisplay"></div>
 <br>
+
+<!-- VARIABLE DATABASE -->
+<h2>Variables:</h2>
+  <div>distKm (round trip distance in km)</div>
+  <div>litrePer100Km = (litres / 100km)</div>
+  <!--
+  <div>milesPerGallon = (miles per US gallon)</div>
+  -->
+  <div>minsTravel (time used in travel)</div>
+  <div>cadPrice (price in Canada)</div>
+  <div>usdPrice (price in USA)</div>
+  <div>litresFuel (fuel in litres)</div>
+  <!--
+  <div>gallonsFuel (fuel in us gallons)</div>
+  -->
+  <div>currencyCAD = (currency * CAD = 1 USD)</div>
+<br>
+
+<!-- USER INPUT DATABASE -->
+<h2>User input => Variable</h2>
+  <div>What was the roundtrip distance? => distKm</div>
+  <div>What is your average litres/100km? => litrePer100Km</div>
+  <!--
+  <div>What is your average miles per gallon? => milesPerGallon </div>
+  -->
+  <div>How long did it take you to travel to the border and back? (minutes) => minsTravel</div>
+  <div>What is the average fuel price in your city? (for 139.9, enter "1.399") => cadPrice</div>
+  <div>What is the fuel price at the border? (for 3.339, enter "3.339") => usdPrice</div>
+  <div>How many litres of fuel did you get? => litresFuel</div>
+  <!--
+  <div>How many gallons of fuel did you get? => gallonsFuel</div>
+  -->
+  <div>Enter today's currency (if $0.80 Canadian Dollar  = $1.00 US Dollar, enter "0.80") => currencyCAD</div>
+<br>
+
+<!-- PRINT DISPLAY DATABASE -->
+<h2>Print displays</h2>
+  <div>"You spent a total of " + fuelSpent + " litres."</div>
+  <div>"You saved a total of $ " + savings + "."</div>
+  <div>"At this rate, you are making $ " + hourlyWage + " // hour."</div>
+<br>
+
+<!-- FUNCTIONS / ALGORITHMS -->
+<h2>Functions/Algorithms</h2>
+  <div>usCadPrice = ((1 / currencyCAD) * (1 / 3.78541)) * (usdPrice)</div>
+  <div>comparePrice = cadPrice - usCadPrice</div>
+  <div>litresFuel = gallonsFuel * 3.78541</div>
+  <div>fuelSpent = (litrePer100Km * distKm) / 100 </div>
+  <div>savings = (comparePrice * litresFuel) - fuelSpent</div>
+  <div>hourlyWage = savings * ((minsTravel + noNexusDelay) / 60)</div>
+<br>
+
+
+
+
+
 In JS before:
 $("#enter").on("click", function() {
   $("#distKmDisplay").text("Your round trip took " + distKm + " kilometers round trip.");
