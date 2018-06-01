@@ -1,3 +1,7 @@
 .resize {
   width: 100px;
 }
+
+.inputPadding {
+  padding: 0 50px;
+}
