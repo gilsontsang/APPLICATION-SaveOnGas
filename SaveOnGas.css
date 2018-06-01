@@ -7,14 +7,14 @@ body {
   font-size: 18px;
 }  
 
-h1 {
-  margin-left: 10%; 
-}
-
 div { 
   font-size: 16px;
   margin-left: 10%;
 }  
+
+h1 {
+  margin-left: 10%;
+}
 
 button {
   background-color: #000000;
@@ -32,5 +32,5 @@ button {
 
 .inputPadding {
   text-align: left;
-  margin-right: 60%;
+  margin-right: 80%;
 }
