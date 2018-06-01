@@ -13,7 +13,7 @@ div {
 }  
 
 h1 {
-  margin-left: 10%;
+  margin: 5% 0 5% 10%;
 }
 
 button {
@@ -33,4 +33,11 @@ button {
 .inputPadding {
   text-align: left;
   margin-right: 80%;
+}
+
+#container {
+  width: 500px;
+  margin: 100px auto;
+  background: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0,0,0, 0.1); /* slight shadow */
 }
