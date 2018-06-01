@@ -1,32 +1,7 @@
-// Calculations
-
-usCadPrice = ((1 / currencyCAD) * (1 / 3.78541)) * (usdPrice);
-
-comparePrice = parseFloat(cadPrice - usCadPrice);
-
-/* Used when Gallons option has been turned on
-litresFuel = gallonsFuel * 3.78541;
-*/
-
-fuelSpent = parseFloat((litrePer100Km * distKm) / 100);
-
-savings = parseFloat((comparePrice * litresFuel) - fuelSpent);
-
-/* Used when Nexus Delay option has been turned on 
-hourlyWage = savings * ((minsTravel + noNexusDelay) / 60);"
-*/
-
-hourlyWage = parseFloat(savings * (minsTravel / 60));
-
-
-
-
-
 // Obtaining all numbers from inputs
-
 $("#distKm").keypress(function(event) {
 	if(event.which === 13) {
-  	distKm = parseFloat($(this).val());
+  	distKm = $(this).val();
     $(this).removeAttr("placeholder");
     $(this).val("");
   }
@@ -34,7 +9,7 @@ $("#distKm").keypress(function(event) {
 
 $("#litrePer100Km").keypress(function(event) {
 	if(event.which === 13) {
-  	litrePer100Km = parseFloat($(this).val());
+  	litrePer100Km = $(this).val();
     $(this).removeAttr("placeholder");
     $(this).val("");
   }
@@ -42,7 +17,7 @@ $("#litrePer100Km").keypress(function(event) {
 
 $("#minsTravel").keypress(function(event) {
 	if(event.which === 13) {
-  	minsTravel = parseFloat($(this).val());
+  	minsTravel = $(this).val();
     $(this).removeAttr("placeholder");
     $(this).val("");
   }
@@ -50,7 +25,7 @@ $("#minsTravel").keypress(function(event) {
 
 $("#cadPrice").keypress(function(event) {
 	if(event.which === 13) {
-  	cadPrice = parseFloat($(this).val());
+  	cadPrice = $(this).val();
     $(this).removeAttr("placeholder");
     $(this).val("");
   }
@@ -58,7 +33,7 @@ $("#cadPrice").keypress(function(event) {
 
 $("#usdPrice").keypress(function(event) {
 	if(event.which === 13) {
-  	usdPrice = parseFloat($(this).val());
+  	usdPrice = $(this).val();
     $(this).removeAttr("placeholder");
     $(this).val("");
   }
@@ -66,7 +41,7 @@ $("#usdPrice").keypress(function(event) {
 
 $("#litresFuel").keypress(function(event) {
 	if(event.which === 13) {
-  	litresFuel = parseFloat($(this).val());
+  	litresFuel = $(this).val();
     $(this).removeAttr("placeholder");
     $(this).val("");
   }
@@ -74,19 +49,32 @@ $("#litresFuel").keypress(function(event) {
 
 $("#currencyCAD").keypress(function(event) {
 	if(event.which === 13) {
-  	currencyCAD = parseFloat($(this).val());
+  	currencyCAD = $(this).val();
     $(this).removeAttr("placeholder");
     $(this).val("");
   }
 })
 
 
-
-
-
 // Enter key functions as print out.
-
 $("#enter").on("click", function() {
+  // Converts US gas prices to Canadian dollars with currency
+  usCadPrice = ((1 / currencyCAD) * (1 / 3.78541)) * (usdPrice);
+	// Compares Canadian gas prices vs US gas prices
+  comparePrice = cadPrice - usCadPrice;
+  /* Used when Nexus Delay option has been turned on 
+  hourlyWage = savings * ((minsTravel + noNexusDelay) / 60);"
+  */
+	// Calculates fuel spent
+  fuelSpent = (litrePer100Km * distKm) / 100;
+  // Calculates savings
+  savings = (comparePrice * litresFuel) - fuelSpent;  
+  // Calculates hourlywage
+	hourlyWage = savings * (minsTravel / 60);
+  /* Add AFTER noNexusDelay has implemented Calculates hourlyWage
+	hourlyWage = savings * ((minsTravel + noNexusDelay) / 60);
+  */
+	// Enter key outputs
 	$("#fuelSpent").text("You spent a total of " + fuelSpent + " litres.");
 	$("#totalSavings").text("You saved a total of $" + savings + ".");
 	$("#hourlyWage").text("At this rate, you are making $" + hourlyWage + " per hour.");
@@ -101,14 +89,7 @@ $("#enter").on("click", function() {
 
 
 
-
-
-
-
-
-
 /* 
-
 In HTML before:
 <h2>Result:</h2>
 <div id="distKmDisplay"></div>
@@ -125,9 +106,6 @@ In HTML before:
 -->
 <div id="currencyCADDisplay"></div>
 <br>
-
-
-
 In JS before:
 $("#enter").on("click", function() {
   $("#distKmDisplay").text("Your round trip took " + distKm + " kilometers round trip.");
@@ -138,6 +116,4 @@ $("#enter").on("click", function() {
   $("#litresFuelDisplay").text("You used " + litresFuel + " litres of fuel.");
   $("#currencyCADDisplay").text("The currency at this time is $" + currencyCAD + " CDN = $1.0 USD.");
 })
-
 */
-
