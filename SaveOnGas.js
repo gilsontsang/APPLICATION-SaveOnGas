@@ -75,6 +75,7 @@ $("#enter").on("click", function() {
 	hourlyWage = savings * ((minsTravel + noNexusDelay) / 60);
   */
 	// Enter key outputs
+  $("#result").text("Result:");
 	$("#fuelSpent").text("You spent a total of " + fuelSpent + " litres.");
 	$("#totalSavings").text("You saved a total of $" + savings + ".");
 	$("#hourlyWage").text("At this rate, you are making $" + hourlyWage + " per hour.");
@@ -106,7 +107,6 @@ In HTML before:
 -->
 <div id="currencyCADDisplay"></div>
 <br>
-
 <!-- VARIABLE DATABASE -->
 <h2>Variables:</h2>
   <div>distKm (round trip distance in km)</div>
@@ -123,7 +123,6 @@ In HTML before:
   -->
   <div>currencyCAD = (currency * CAD = 1 USD)</div>
 <br>
-
 <!-- USER INPUT DATABASE -->
 <h2>User input => Variable</h2>
   <div>What was the roundtrip distance? => distKm</div>
@@ -140,14 +139,12 @@ In HTML before:
   -->
   <div>Enter today's currency (if $0.80 Canadian Dollar  = $1.00 US Dollar, enter "0.80") => currencyCAD</div>
 <br>
-
 <!-- PRINT DISPLAY DATABASE -->
 <h2>Print displays</h2>
   <div>"You spent a total of " + fuelSpent + " litres."</div>
   <div>"You saved a total of $ " + savings + "."</div>
   <div>"At this rate, you are making $ " + hourlyWage + " // hour."</div>
 <br>
-
 <!-- FUNCTIONS / ALGORITHMS -->
 <h2>Functions/Algorithms</h2>
   <div>usCadPrice = ((1 / currencyCAD) * (1 / 3.78541)) * (usdPrice)</div>
@@ -157,11 +154,6 @@ In HTML before:
   <div>savings = (comparePrice * litresFuel) - fuelSpent</div>
   <div>hourlyWage = savings * ((minsTravel + noNexusDelay) / 60)</div>
 <br>
-
-
-
-
-
 In JS before:
 $("#enter").on("click", function() {
   $("#distKmDisplay").text("Your round trip took " + distKm + " kilometers round trip.");
