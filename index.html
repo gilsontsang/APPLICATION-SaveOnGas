@@ -14,67 +14,70 @@
 
 <body>
 
-<h1>Welcome to <img class="resize" src="http://www.saveon.com/img/logo.png">Gas</h1>
+<div id="container">
+  <br>
+  <h1>Welcome to <img class="resize" src="http://www.saveon.com/img/logo.png">Gas</h1>
 
-<!-- INPUTS -->
-<div>What was the round-trip distance?
-  <input type="number" class="inputPadding" id="distKm" placeholder="In kilometers">
+  <!-- INPUTS -->
+  <div>What was the round-trip distance?
+    <input type="number" class="inputPadding" id="distKm" placeholder="In kilometers">
+  </div>
+  <br>
+
+  <div>What is your average litres/100km?
+    <input type="number" class="inputPadding" id="litrePer100Km" placeholder="Average l/100km">
+  </div>
+  <br>
+
+  <!--
+  <div>What is your average miles per gallon?
+    <input type="number" class="inputPadding" id="milesPerGallon" placeholder="">
+  </div>
+  <br>
+  -->
+
+  <div>How long did it take you to travel to the border and back?
+    <input type="number" class="inputPadding" id="minsTravel" placeholder="In minutes">
+  </div>
+  <br>
+
+  <div>Average fuel price per litre in your city?
+    <input type="number" class="inputPadding" id="cadPrice" placeholder="For 139.9, input 1.399">
+  </div>
+  <br>
+
+  <div>Fuel price at the border?
+    <input type="number" class="inputPadding" id="usdPrice" placeholder="For 3.339, input 3.339">
+  </div>
+  <br>
+
+  <div>How many litres of fuel did you get?
+    <input type="number" class="inputPadding" id="litresFuel" placeholder="Litres of fuel">
+  </div>
+  <br>
+
+  <!--
+  <div>How many gallons of fuel did you get?
+    <input type="number" class="inputPadding" id="gallonsFuel" placeholder="Gallons of fuel">
+  </div>
+  <br>
+  -->
+  <div>Enter today's currency.
+    <input type="number" class="inputPadding" id="currencyCAD" placeholder="0.8CAD=1USD, input 0.8">
+  </div>
+  <br>
+
+  <!-- EVALUATION BUTTON -->
+  <button id="enter">Enter</button>
+  <br>
+
+  <!-- DISPLAY RESULTS -->
+  <div id="result"></div>
+  <div id="fuelSpent"></div>
+  <div id="totalSavings"></div>
+  <div id="hourlyWage"></div>
+  <br>
 </div>
-<br>
-
-<div>What is your average litres/100km?
-  <input type="number" class="inputPadding" id="litrePer100Km" placeholder="Average l/100km">
-</div>
-<br>
-
-<!--
-<div>What is your average miles per gallon?
-  <input type="number" class="inputPadding" id="milesPerGallon" placeholder="">
-</div>
-<br>
--->
-
-<div>How long did it take you to travel to the border and back?
-  <input type="number" class="inputPadding" id="minsTravel" placeholder="In minutes">
-</div>
-<br>
-
-<div>Average fuel price per litre in your city?
-  <input type="number" class="inputPadding" id="cadPrice" placeholder="For 139.9, input 1.399">
-</div>
-<br>
-
-<div>Fuel price at the border?
-  <input type="number" class="inputPadding" id="usdPrice" placeholder="For 3.339, input 3.339">
-</div>
-<br>
-
-<div>How many litres of fuel did you get?
-  <input type="number" class="inputPadding" id="litresFuel" placeholder="Litres of fuel">
-</div>
-<br>
-
-<!--
-<div>How many gallons of fuel did you get?
-  <input type="number" class="inputPadding" id="gallonsFuel" placeholder="Gallons of fuel">
-</div>
-<br>
--->
-<div>Enter today's currency.
-  <input type="number" class="inputPadding" id="currencyCAD" placeholder="0.8CAD=1USD, input 0.8">
-</div>
-<br>
-
-<!-- EVALUATION BUTTON -->
-<button id="enter">Enter</button>
-<br>
-
-<!-- DISPLAY RESULTS -->
-<div id="result"></div>
-<div id="fuelSpent"></div>
-<div id="totalSavings"></div>
-<div id="hourlyWage"></div>
-<br>
 
 <script type="text/javascript" src="SaveOnGas.js"></script>
 
