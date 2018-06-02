@@ -68,9 +68,9 @@ $("#enter").on("click", function() {
 	// Calculates fuel spent
   fuelSpent = (litrePer100Km * distKm) / 100;
   // Calculates savings
-  savings = (comparePrice * litresFuel) - fuelSpent;  
+  savings = (comparePrice * litresFuel) - (fuelSpent * usdPrice);  
   // Calculates hourlywage
-	hourlyWage = savings * (minsTravel / 60);
+	hourlyWage = savings / (minsTravel / 60);
   /* Add AFTER noNexusDelay has implemented Calculates hourlyWage
 	hourlyWage = savings * ((minsTravel + noNexusDelay) / 60);
   */
