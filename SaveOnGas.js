@@ -77,7 +77,7 @@ $("#enter").on("click", function() {
 	// Enter key outputs
   $("#result").text("Result:");
 	$("#fuelSpent").text("You spent a total of " + fuelSpent + " litres.");
-  $("#comparePrice").text("The difference per litre in gas price is " + comparePrice + " per litre.");
+  $("#comparePrice").text("You save an approximately $" + comparePrice + " per litre by going to the border.");
 	$("#totalSavings").text("You saved a total of $" + savings + ".");
 	$("#hourlyWage").text("At this rate, you are making $" + hourlyWage + " per hour.");
   
