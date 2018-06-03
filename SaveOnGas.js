@@ -59,7 +59,7 @@ $("#currencyCAD").keypress(function(event) {
 // Enter key functions as print out.
 $("#enter").on("click", function() {
   // Converts US gas prices to Canadian dollars with currency
-  usCadPrice = ((1 / currencyCAD) * (1 / 3.78541)) * (usdPrice);
+  usCadPrice = currencyCAD * usdPrice * (1 / 3.78541) * ;
 	// Compares Canadian gas prices vs US gas prices
   comparePrice = cadPrice - usCadPrice;
   /* Used when Nexus Delay option has been turned on 
